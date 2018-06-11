@@ -57,6 +57,8 @@ class Flight(models.Model):
         for f in Flight.objects.filter(crew_first_name = self.crew_first_name, crew_last_name = self.crew_last_name):
             if (self.start_time > f.start_time and self.start_time < f.end_time) or (self.end_time>f.start_time and self.end_time<f.end_time):
                 raise ValidationError(_('Two flights of crew at the same time'))
+            if (f.start_time>self.start_time  and self.end_time > f.end_time) or (self.end_time>f.start_time and self.end_time<f.end_time):
+                raise ValidationError(_('Two flights of crew at the same time'))
         return super(Flight,self).clean()
 
 
