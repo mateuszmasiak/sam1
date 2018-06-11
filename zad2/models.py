@@ -33,7 +33,6 @@ class Plane(models.Model):
     places = models.IntegerField()
     #crew = models.ForeignKey(PlaneCrew, on_delete=models.CASCADE, default = 1)
 
-# TODO NIE DA SIE USUNAC TYLKO ZASTAPIC + nie da sie dwoch lotow w tym samym czasie
     def __str__(self):
         return self.rejestration_number
     def add(self):
