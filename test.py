@@ -1,7 +1,20 @@
+ -*- coding: utf-8 -*-
+
+
+from __future__ import unicode_literals
+
+from django.test import TestCase
+
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+import unittest
+import time
+
+
 driver = webdriver.Chrome(executable_path="/Users/mateuszmasiak/Desktop/chromedriver")
-driver = webdriver.Chrome()
+driver = webd
+adfs
+river.Chrome()
 driver.get("http://127.0.0.1:8000/planecrew/")
 elem = driver.find_element_by_css_selector("#content > a")
 elem.click()
@@ -27,4 +40,6 @@ elem = driver.find_element_by_css_selector("#prz1")
 elem.send_keys("2965")
 elem = driver.find_element_by_css_selector("#prz1")
 driver.refresh()
+time.sleep(2)
 elem.click()
+time.sleep(2)

@@ -44,6 +44,8 @@ imie='testoweImie'
 nazwisko='testoweNazwisko'
 Flight.objects.create(airport = lotnisko, start_time = start, end_time = koniec, plane = pl, crew_last_name = nazwisko, crew_first_name = imie)
 
+pl = Plane.objects.create(rejestration_number='123456', places = 23)
+
 lotnisko = 'l'
 start = datetime(2010,1,1,1,1,3)
 koniec = datetime(2010,1,2,1,1,3)
